@@ -23,3 +23,9 @@ Enrich SNMP Trap before forwarding to other SNMP Trap Consumer (E.g Omnibus).
 7. Click OK.
 8. Monitor the file at /tmp/alarm_enrichment.log for calling of `alarm_enrichment.sh`.
 9. Monitor the fiel at ~/java0.log(default) for the calling of the class `com.psl.TestForwarder`.
+
+### Command
+1. To generate Artificial Wireless Alarm with 3 seconds interval, use the command below,
+```
+while ( true ) do alarmapi_admin -g 3 "Seizure Attempts" Environmental 0 Cell 10002 seizure_attempts informationMissing "Threshold Crossed" additional_text "more Severe" 1401 Major date +%Y%m%d%H%M%S`; sleep 3; done;
+```
